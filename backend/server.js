@@ -3,13 +3,16 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 3000;
 const morgan = require("morgan");
+const workoutRoutes = require("./routes/workouts");
 
 // middleware
+app.use(express.json())
 app.use(morgan("dev"));
 
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to my app" });
-});
+
+// routes
+app.use("/api/workouts", workoutRoutes);
+
 
 app.listen(port, () => {
   console.log(`✅ Listening for client requests on Port: ${port} ✅`);
