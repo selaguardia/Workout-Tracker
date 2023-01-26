@@ -1,12 +1,12 @@
 const express = require('express')
-
+require('dotenv').config()
 const app = express()
-const port = 4000;
+const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
     res.json({message: 'Welcome to my app'})
 })
 
-app.listen(port,(res,req) => {
-    console.log(`✅ Listening for client requests on Port ${port} ✅`)
+app.listen(port,() => {
+    console.log(`✅ Listening for client requests on Port: ${port} ✅`)
 })
