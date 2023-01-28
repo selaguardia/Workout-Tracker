@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
 /* layout */
 :root {
-  --primary: #2b1ed7;
-  --error: #e7192a;
+  --primary: rgb(20, 34, 160);
+  --error: #cf1726;
 }
 body {
   background: #f1f1f1;
@@ -11,7 +11,7 @@ body {
   font-family: 'Roboto Slab', serif;
 }
 header {
-  background: #fff;
+  background: var(--primary);
 }
 header .container {
   max-width: 1400px;
@@ -22,7 +22,7 @@ header .container {
   justify-content: space-between;
 }
 header a {
-  color: #333;
+  color: rgb(244, 240, 240);
   text-decoration: none;
 }
 .pages{
@@ -44,6 +44,7 @@ header a {
   padding: 20px;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  max-width: 500px;
 }
 .workout-details h4 {
   margin: 0 0 10px 0;
@@ -63,7 +64,12 @@ header a {
   background: #f1f1f1;
   padding: 6px;
   border-radius: 50%;
-  color: #333;
+  color: var(--error);
+}
+
+.material-symbols-outlined:hover {
+  color: #f1f1f1;
+  background:var(--error);
 }
 
 /* new workout form */
@@ -87,6 +93,10 @@ form button {
   font-family: 'Roboto Slab', serif;
   border-radius: 4px;
   cursor: pointer;
+}
+
+form button:hover {
+  background: rgb(48, 66, 236);
 }
 div.error {
   padding: 10px;
