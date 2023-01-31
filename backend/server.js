@@ -4,6 +4,8 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 const workoutRoutes = require("./routes/workouts");
+const userRoutes = require("./routes/user");
+
 const port = process.env.PORT || 3000;
 
 // middleware
@@ -12,6 +14,7 @@ app.use(morgan("dev"));
 
 // routes
 app.use("/api/workouts", workoutRoutes);
+app.use("/api/user", userRoutes)
 
 // connect to db
 mongoose
