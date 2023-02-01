@@ -4,9 +4,10 @@
 :root {
   --primary: rgb(20, 34, 160);
   --error: #cf1726;
+  --background:#e3e2e2;
 }
 body {
-  background: #f1f1f1;
+  background: var(--background);
   margin: 0;
   font-family: 'Roboto Slab', serif;
 }
@@ -108,4 +109,28 @@ div.error {
 }
 input.error {
   border: 1px solid var(--error);
+}
+
+/* navbar */
+nav {
+  display: flex;
+  align-items: center;
+}
+nav a {
+  margin-left: 10px;
+  padding: 6px;
+}
+nav a:hover {
+  background-color: var(--background);
+  color:var(--primary);
+  padding: 6px;
+  border-radius: 4px;
+}
+/* auth forms */
+form.signup, form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
 }
