@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAuthContext } from "./useAuthContext";
 
-const url= "https://workout-tracker-blush.vercel.app/"
+const url= "https://workout-tracker-blush.vercel.app"
 
 
 export const useLogin = () => {
