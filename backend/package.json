@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server"
   },
   "keywords": [],
   "author": "Sergio Laguardia",
@@ -16,6 +16,7 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.9.0",
+    "nodemon": "^2.0.20",
     "validator": "^13.7.0"
   },
   "devDependencies": {
