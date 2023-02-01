@@ -1,4 +1,5 @@
 {
+  "proxy": "https://workouttracker-898r.onrender.com/",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
