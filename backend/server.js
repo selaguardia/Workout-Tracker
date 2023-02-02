@@ -1,14 +1,17 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
+const cors = require('cors')
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 const workoutRoutes = require("./routes/workouts");
 const userRoutes = require("./routes/user");
 
+
 const port = process.env.PORT || 3000;
 
 // middleware
+app.use(cors())
 app.use(express.json());
 app.use(morgan("dev"));
 
