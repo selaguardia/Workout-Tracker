@@ -8,6 +8,7 @@ import Signup from "./pages/SIgnup";
 import Login from "./pages/Login";
 
 function App() {
+  // const user = true
   const { user } = useAuthContext()
   return (
     <div className="App">
